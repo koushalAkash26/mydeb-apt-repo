@@ -1,4 +1,3 @@
-Sure! Here's a basic structure for the `README.md` file for your GitHub APT repository. This README explains how users can add your APT repository to their system and install packages from it. You can customize it as per your needs.
 
 ---
 
@@ -21,13 +20,8 @@ echo "deb [trusted=yes] https://github.com/koushalAkash26/mydeb-apt-repo/koushal
 Alternatively, you can download the repository's `pgp-key.public` key file and add it to your trusted APT keys.
 
 ```bash
-curl -fsSL https://github.com/koushalAkash26/my-apt-repo/raw/main/pgp-key.public | sudo gpg --dearmor -o /usr/share/keyrings/myrepo-archive-keyring.gpg
-```
+curl -fsSL https://github.com/koushalAkash26/my-apt-repo/raw/main/pgp-key.public | sudo gpg --dearmor -o /etc/apt/trusted.gpg.d/mykey.gpg
 
-Then, add the repository to your system:
-
-```bash
-echo "deb [signed-by=/usr/share/keyrings/myrepo-archive-keyring.gpg] https://github.com/koushalAkash26/my-apt-repo stable main" | sudo tee /etc/apt/sources.list.d/myrepo.list
 ```
 
 ### Step 2: Update the Package List
