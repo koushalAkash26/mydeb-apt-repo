@@ -52,9 +52,10 @@ my-apt-repo/
 │   └── stable/
 │       └── main/
 │           ├── binary-amd64/
-│           │   └── Packages.gz
-│           └── binary-i386/
-│               └── Packages.gz
+│               └── Packages
+|               └── Packages.gz 
+│           
+│ 
 ├── pool/
 │   └── <package files here>
 └── README.md
