@@ -42,29 +42,6 @@ sudo apt-get install <package-name>
 
 Replace `<package-name>` with the actual name of the package you want to install.
 
-## Repository Structure
-
-This repository follows a typical APT repository structure:
-
-```plaintext
-my-apt-repo/
-├── dists/
-│   └── stable/
-│       └── main/
-│           ├── binary-amd64/
-│               └── Packages
-|               └── Packages.gz 
-│           
-│ 
-├── pool/
-│   └── <package files here>
-└── README.md
-```
-
-- **dists/**: Contains metadata and release information for the repository.
-- **pool/**: Stores the actual `.deb` package files.
-- **Packages.gz**: This file lists the available packages for a given architecture.
-- **Release**: Contains information about the repository (like its version, codename, and architectures).
 
 ## Hosting on GitHub
 
